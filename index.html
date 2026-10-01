@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <title>Sea View Hotel - Presentazione</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
+    <!-- Custom CSS -->
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+            font-family: 'Jost', sans-serif;
+        }
+        .reveal h1 {
+            color: #ffffff;
+            font-size: 3.5em;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            font-weight: 600;
+        }
+        .reveal h2 {
+            color: #ffca00; /* Colore secondario dal sito */
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+        .reveal h3 {
+            color: #085089; /* Colore primario dal sito */
+        }
+        .reveal p, .reveal li {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .dark-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .white-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .white-box h2 {
+            color: #085089;
+            text-shadow: none;
+        }
+        .white-box li {
+            color: #444;
+        }
+        .grid-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .grid-gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0 !important;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .highlight-text {
+            color: #ffca00;
+            font-weight: bold;
+        }
+        .btn-book {
+            display: inline-block;
+            background-color: #085089;
+            color: white !important;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .btn-book:hover {
+            background-color: #ffca00;
+            color: #085089 !important;
+        }
+        .contacts-footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        
+        /* Language Switcher */
+        #lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            border-radius: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background: #ffca00;
+            color: #085089;
+        }
+        
+        /* Language display logic */
+        body[data-lang="it"] .lang-en { display: none !important; }
+        body[data-lang="en"] .lang-it { display: none !important; }
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-lang="it">
+    
+    <div id="lang-switch">
+        <button class="lang-btn active" onclick="setLang('it')">IT</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Welcome -->
+            <section data-background-image="resize-seaview_esterni-hall_01_original.jpg">
+                <div class="dark-overlay">
+                    <h1>SEA VIEW HOTEL</h1>
+                    
+                    <h2 class="lang-it">Il mare di fronte a te</h2>
+                    <h2 class="lang-en">The sea in front of you</h2>
+                    
+                    <p class="lang-it">Uno sguardo sull'incanto di San Vito Lo Capo</p>
+                    <p class="lang-en">A glimpse into the enchantment of San Vito Lo Capo</p>
+                </div>
+            </section>
+
+            <!-- Slide 2: L'Hotel -->
+            <section data-background-image="WhatsApp Image 2026-09-30 at 3.39.51 PM.jpeg" data-background-opacity="0.3">
+                <div class="white-box">
+                    <h2 class="lang-it">Un'Oasi di Comfort e Stile</h2>
+                    <h2 class="lang-en">An Oasis of Comfort and Style</h2>
+                    
+                    <p class="lang-it">Benvenuti in una struttura <strong>moderna e di recente costruzione</strong>, progettata per offrirvi il massimo del relax.</p>
+                    <p class="lang-en">Welcome to a <strong>modern and newly built</strong> structure, designed to offer you maximum relaxation.</p>
+                    
+                    <ul class="lang-it">
+                        <li><span class="highlight-text" style="color: #085089;">Posizione strategica:</span> Nel cuore di San Vito Lo Capo.</li>
+                        <li><span class="highlight-text" style="color: #085089;">Spiaggia a due passi:</span> Dimentica l'auto e vivi la vacanza in totale libertà.</li>
+                        <li><span class="highlight-text" style="color: #085089;">Design contemporaneo:</span> Ambienti eleganti inondati di luce naturale.</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li><span class="highlight-text" style="color: #085089;">Strategic location:</span> In the heart of San Vito Lo Capo.</li>
+                        <li><span class="highlight-text" style="color: #085089;">Beach steps away:</span> Forget the car and live your holiday in total freedom.</li>
+                        <li><span class="highlight-text" style="color: #085089;">Contemporary design:</span> Elegant spaces flooded with natural light.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 3: Le Camere (Vertical slides) -->
+            <section>
+                <!-- 3.1 Camere Overview -->
+                <section data-background-image="resize-vista_mare_03_ota_original.jpg">
+                    <div class="dark-overlay" style="margin-top: 300px;">
+                        <h2 class="lang-it">Le Nostre Camere</h2>
+                        <h2 class="lang-en">Our Rooms</h2>
+                        
+                        <p class="lang-it">Spazi ampi e luminosi, con una spettacolare vista che vi regalerà il buongiorno più bello.</p>
+                        <p class="lang-en">Spacious and bright spaces, with a spectacular view that will give you the most beautiful good morning.</p>
+                    </div>
+                </section>
+                <!-- 3.2 Camere Detail -->
+                <section data-background-image="resize-vista_mare_017_ota_original_copy_1.jpg">
+                    <div class="dark-overlay" style="margin-top: 300px;">
+                        <h2 class="lang-it">Comfort Moderno</h2>
+                        <h2 class="lang-en">Modern Comfort</h2>
+                        
+                        <p class="lang-it">Letti comodissimi, arredi eleganti e tutti i servizi per farti sentire come a casa, ma con il mare alla finestra.</p>
+                        <p class="lang-en">Comfortable beds, elegant furnishings, and all the amenities to make you feel at home, but with the sea at your window.</p>
+                    </div>
+                </section>
+                <!-- 3.3 Camere Bathrooms/Details -->
+                <section data-background-color="#f0f4fb">
+                    <h2 class="lang-it" style="color: #085089;">Dettagli di Classe</h2>
+                    <h2 class="lang-en" style="color: #085089;">Classy Details</h2>
+                    
+                    <p class="lang-it" style="color: #444;">Bagni moderni e finiture di pregio.</p>
+                    <p class="lang-en" style="color: #444;">Modern bathrooms and fine finishes.</p>
+                    
+                    <div class="grid-gallery">
+                        <img src="resize-seaview_a6_014_original.jpg" alt="Dettaglio Camera">
+                        <img src="resize-seaview_a6_015_original.jpg" alt="Dettaglio Bagno">
+                    </div>
+                </section>
+            </section>
+
+            <!-- Slide 4: Terrazza e Colazione -->
+            <section>
+                <!-- 4.1 Terrazza -->
+                <section data-background-image="sea-view-san-vito-lo-capo-hotel-terrazza_10_original.jpg">
+                    <div class="dark-overlay">
+                        <h2 class="lang-it">La Terrazza Panoramica</h2>
+                        <h2 class="lang-en">The Panoramic Terrace</h2>
+                        
+                        <p class="lang-it">Il nostro fiore all'occhiello. Un luogo magico dove il cielo incontra il mare.</p>
+                        <p class="lang-en">Our pride and joy. A magical place where the sky meets the sea.</p>
+                    </div>
+                </section>
+                <!-- 4.2 Colazione -->
+                <section data-background-image="resize-seaviewbreakfast_018_original.jpg">
+                    <div class="dark-overlay" style="margin-top: 250px;">
+                        <h2 class="lang-it">Colazione con Vista</h2>
+                        <h2 class="lang-en">Breakfast with a View</h2>
+                        
+                        <p class="lang-it">Inizia la giornata nel modo migliore: prodotti tipici, dolci fatti in casa e l'azzurro del mare di San Vito Lo Capo.</p>
+                        <p class="lang-en">Start your day the best way: local products, homemade cakes, and the blue sea of San Vito Lo Capo.</p>
+                    </div>
+                </section>
+                <!-- 4.3 Relax in terrazza -->
+                <section data-background-image="sea-view-san-vito-lo-capo-hotel-terrazza_5_original.jpg">
+                    <div class="dark-overlay" style="margin-top: 250px;">
+                        <h2 class="lang-it">Momenti di Relax</h2>
+                        <h2 class="lang-en">Moments of Relaxation</h2>
+                        
+                        <p class="lang-it">La terrazza è a tua disposizione per goderti un aperitivo al tramonto in totale tranquillità.</p>
+                        <p class="lang-en">The terrace is at your disposal to enjoy an aperitif at sunset in total tranquility.</p>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Slide 5: Recap Gallery -->
+            <section data-background-color="#085089">
+                <h2 class="lang-it" style="color: white;">L'Esperienza Sea View</h2>
+                <h2 class="lang-en" style="color: white;">The Sea View Experience</h2>
+                
+                <div class="grid-gallery">
+                    <img src="sea-view-san-vito-lo-capo-hotel-terrazza_2_original.jpg" alt="Terrazza vista">
+                    <img src="resize-seaviewbreakfast_013_original.jpg" alt="Colazione">
+                    <img src="resize-vista_mare_03_ota_original.jpg" alt="Camera vista">
+                    <img src="resize-seaview_esterni-hall_01_original.jpg" alt="Esterni">
+                </div>
+            </section>
+
+            <!-- Slide 6: Contatti e Prenotazioni -->
+            <section data-background-color="#111">
+                <h2 class="lang-it" style="color: #ffca00;">Vi aspettiamo!</h2>
+                <h2 class="lang-en" style="color: #ffca00;">We look forward to welcoming you!</h2>
+                
+                <p class="lang-it">Pronto a vivere il tuo sogno a San Vito Lo Capo?</p>
+                <p class="lang-en">Ready to live your dream in San Vito Lo Capo?</p>
+                
+                <a href="https://wubook.net/nneb/bk/?ep=220f1559" target="_blank" class="btn-book lang-it">Prenota Ora</a>
+                <a href="https://wubook.net/nneb/bk/?ep=220f1559" target="_blank" class="btn-book lang-en">Book Now</a>
+                
+                <div class="contacts-footer" style="margin-top: 40px; color: #ccc;">
+                    <p><strong>Sea View Hotel</strong></p>
+                    <p><i class="fa fa-map-marker"></i> Via Faro, 15 - San Vito Lo Capo (TP)</p>
+                    <p><a href="https://www.seaviewsanvitolocapo.it" style="color: #ffca00;">www.seaviewsanvitolocapo.it</a></p>
+                    <br>
+                    <small style="font-size: 0.6em; color: #777;">CIN: IT081020A1VMIHX2ZD | CIR: 19081020A567660</small>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'fade',
+            backgroundTransition: 'slide'
+        });
+
+        // Language Switcher Logic
+        function setLang(lang) {
+            document.body.setAttribute('data-lang', lang);
+            const btns = document.querySelectorAll('.lang-btn');
+            btns.forEach(btn => {
+                if(btn.innerText.toLowerCase() === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            // Update reveal.js layout after changing DOM elements display
+            setTimeout(() => {
+                Reveal.layout();
+            }, 100);
+        }
+    </script>
+</body>
+</html>
